@@ -16,7 +16,7 @@ jobs:
       - name: Generate Spec File
         run: |
           # The script fetches the latest version and overwrites agy.spec
-          ./generate_spec.sh
+          bash ./generate_spec.sh
 
       - name: Check for changes
         id: git-check
