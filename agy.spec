@@ -8,14 +8,20 @@ Summary:        Google Antigravity CLI
 License:        Proprietary
 URL:            https://antigravity-cli-auto-updater-974169037036.us-central1.run.app
 Source0:        https://storage.googleapis.com/antigravity-public/antigravity-cli/1.0.2-6109799369277440/linux-x64/cli_linux_x64.tar.gz
+Source1:        https://storage.googleapis.com/antigravity-public/antigravity-cli/1.0.2-6109799369277440/linux-arm/cli_linux_arm64.tar.gz
 
-ExclusiveArch:  x86_64
+ExclusiveArch:  x86_64 aarch64
 
 %description
 Antigravity CLI flat native build.
 
 %prep
-%setup -q -c
+%ifarch x86_64
+%setup -q -c -T -a 0
+%endif
+%ifarch aarch64
+%setup -q -c -T -a 1
+%endif
 
 %build
 # Pre-compiled binary, nothing to build
@@ -26,7 +32,3 @@ install -p -m 755 antigravity %{buildroot}%{_bindir}/agy
 
 %files
 %{_bindir}/agy
-
-%changelog
-* Sun May 24 2026 Antigravity CLI Packager <packager@example.com> - 1.0.2-1
-- Initial COPR package for Antigravity CLI
