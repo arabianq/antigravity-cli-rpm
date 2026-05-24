@@ -1,3 +1,5 @@
+%global debug_package %{nil}
+
 Name:           agy
 Version:        1.0.2
 Release:        1%{?dist}
