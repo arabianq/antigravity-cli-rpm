@@ -1,14 +1,14 @@
 %global debug_package %{nil}
 
 Name:           agy
-Version:        1.5.8
+Version:        1.5.9
 Release:        1%{?dist}
 Summary:        Google Antigravity CLI
 
 License:        Proprietary
 URL:            https://antigravity-cli-auto-updater-974169037036.us-central1.run.app
-Source0:        https://storage.googleapis.com/antigravity-public/antigravity-cli/1.5.8-4602374149505024/linux-x64/cli_linux_x64.tar.gz
-Source1:        https://storage.googleapis.com/antigravity-public/antigravity-cli/1.5.8-4602374149505024/linux-arm/cli_linux_arm64.tar.gz
+Source0:        https://storage.googleapis.com/antigravity-public/antigravity-cli/1.5.9-4515810895593472/linux-x64/cli_linux_x64.tar.gz
+Source1:        https://storage.googleapis.com/antigravity-public/antigravity-cli/1.5.9-4515810895593472/linux-arm/cli_linux_arm64.tar.gz
 Source2:        https://raw.githubusercontent.com/google-antigravity/antigravity-cli/main/CHANGELOG.md
 
 ExclusiveArch:  x86_64 aarch64
